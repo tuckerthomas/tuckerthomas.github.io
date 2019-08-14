@@ -14,7 +14,7 @@
     
     
     
-    <title>About</title>
+    <title>Using Github Pages</title>
     
     
     
@@ -32,9 +32,13 @@
 
 <!-- Place this data between the <head> tags of your website -->
 
-<meta name="description" content="My website for projects and other interesting things." />
+<meta name="description" content="Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan)." />
+
+  <meta name="keywords" itemprop="tags" content="jekyll, ruby, blog, github pages"/>
 
 
+
+  <meta name="keywords" itemprop="categories" content="software, tutorial" />
 
 
 
@@ -43,41 +47,59 @@
 
 
 
-<meta name="twitter:title" content="About" />
-<meta name="twitter:description" content="My website for projects and other interesting things." />
+<meta name="twitter:title" content="Using Github Pages" />
+<meta name="twitter:description" content="Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan)." />
 
 
 
 <!-- Twitter summary card with large image must be at least 280x150px -->
 
-<meta name="twitter:url" content="http://tuckerthomas.com//about/" />
+<meta name="twitter:url" content="http://tuckerthomas.com//software/tutorial/2019/08/13/Using-Github-Pages.html" />
 
 <!-- Open Graph data -->
-<meta property="og:title" content="About" />
+<meta property="og:title" content="Using Github Pages" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tuckerthomas.com//about/" />
+<meta property="og:url" content="http://tuckerthomas.com//software/tutorial/2019/08/13/Using-Github-Pages.html" />
 
 
-<meta property="og:description" content="My website for projects and other interesting things." />
+<meta property="og:description" content="Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan)." />
 <meta property="og:site_name" content="Tucker Thomas" />
 
 
 <meta property="og:locale" content="" />
 
 
+  <meta property="article:published_time" content="2019-08-13T21:38:11-04:00" />
+
+
+
+
+  
+    <meta property="article:tag" content="jekyll" />
+  
+    <meta property="article:tag" content="ruby" />
+  
+    <meta property="article:tag" content="blog" />
+  
+    <meta property="article:tag" content="github pages" />
+  
 
 
 
 
 
-
+  
+    <meta property="article:tag" content="software" />
+  
+    <meta property="article:tag" content="tutorial" />
+  
 
 
 
 
     
     
-    <link rel="canonical" href="http://tuckerthomas.com/about/">
+    <link rel="canonical" href="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html">
     
     
     
@@ -158,28 +180,100 @@
         
         
         <section class="page-header">
-            <h1 class="project-name">About</h1>
+            <h1 class="project-name">Using Github Pages</h1>
             <h2 class="project-tagline"></h2>
             
             <!-- Post tagline -->
+            
+            <h2 class="project-date">
+                <time datetime="2019-08-13T21:38:11-04:00" itemprop="datePublished">
+                    
+                    Aug 13, 2019
+                </time>
+                
+                
+            </h2>
             
             <!-- End: Post tagline -->
         </section>
         
         <section class="main-content">
             
-            <article>
+            <article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div>
-    <h3 id="hey">Hey,</h3>
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Using Github Pages</h1>
+    <p class="post-meta">
+      <time datetime="2019-08-13T21:38:11-04:00" itemprop="datePublished">
+        
+        Aug 13, 2019
+      </time>
+      </p>
+  </header> -->
 
-<p>My name is Tucker Thomas. Most of my experience lies within the realm of Software Engineering, whereas my hobbies include Linux, Networking or Security related things.</p>
+  <div itemprop="articleBody">
+    <p>Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).</p>
 
-<p>I use Arch btw.</p>
+<p>For more information, check Github Pages <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">site</a>.</p>
+
+<p>For generating a static site, there’s plenty of tools. Really, just search ‘static site generator’ and you’ll find an abundance of tools. I decided to go with a well supported tool called <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>.</p>
+
+<h3 id="jekyll-setup">Jekyll Setup</h3>
+<p>Jekyll was written in ruby and was rather simple to install. If you’ve used python and virtual-env <a href="https://github.com/rbenv/rbenv" target="_blank" rel="noopener noreferrer">rbenv</a> is right up your alley. It automatically manages ruby versions and switches based on a local <code class="highlighter-rouge">.ruby-version</code> file instead of local binaries like virtual-env.</p>
+
+<p>Once you’ve determined if you want to install rbenv, you can follow this guide like installing ruby gems.</p>
+
+<p>Next we’ll install jekyll and bundle gems.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+</code></pre></div></div>
+
+<p>And initialize a new static site ‘My Blog’</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new myblog
+</code></pre></div></div>
+
+<p>This will create a folder with everything we need inside of it.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd myblog
+</code></pre></div></div>
+
+<p>Once inside, you can generate or build the site with</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll build
+</code></pre></div></div>
+
+<p>Alternatively, if you want to host the site locally with the added benefit of hot-reloading</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>When building, this will generate the <code class="highlighter-rouge">_site</code> folder. This is where all the static files will be placed, so that we can serve them in the future.</p>
+
+<h3 id="putting-it-all-together">Putting it All Together</h3>
+
+<p>So, the way Github Pages works is that it pulls from the <code class="highlighter-rouge">master</code> branch of the user’s <code class="highlighter-rouge">user.github.io</code> repository and serves that on a web server. Since we’re using a static site generator we need to host the source/template files on another branch.</p>
+
+<p>The cleanest way that I’ve seen and will suggest, is to put the source files onto a <code class="highlighter-rouge">source</code> branch and then put the generated <code class="highlighter-rouge">_site</code> folder onto the ‘master’ branch.</p>
+
+<p>When initializing the new jekyll site, make sure that a <code class="highlighter-rouge">.gitignore</code> file is created with the folder <code class="highlighter-rouge">_site</code> added to it. This will allow us to not track the generated site and initialize another git repo within the folder.</p>
+
+<p>Basically, within the <code class="highlighter-rouge">myblog</code> folder</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git remote add origin https://github.com/user/repo.git
+git checkout -b sources
+git add *
+git push origin sources
+</code></pre></div></div>
+
+<p>Then, within the <code class="highlighter-rouge">myblog/_site</code> folder</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git remote add origin https://github.com/user/repo.git
+git add *
+git push origin master
+</code></pre></div></div>
+
+<p>Anyway, once that is setup you can locally make any edits to the site on the <code class="highlighter-rouge">sources</code> branch and push them as needed. When you want to actually update the site on Github Pages, push the generated <code class="highlighter-rouge">_site</code> folder to the master branch from within the folder.</p>
 
 
   </div>
 
+  
 </article>
 
             

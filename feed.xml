@@ -1,13 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://tuckerthomas.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://tuckerthomas.com/" rel="alternate" type="text/html" /><updated>2019-08-04T08:05:32-04:00</updated><id>http://tuckerthomas.com/feed.xml</id><title type="html">Tucker Thomas’ Somewhat Interesting Blog?</title><subtitle>My website for projects and other interesting things.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://tuckerthomas.com/jekyll/update/2019/08/03/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-08-03T03:43:54-04:00</published><updated>2019-08-03T03:43:54-04:00</updated><id>http://tuckerthomas.com/jekyll/update/2019/08/03/welcome-to-jekyll</id><content type="html" xml:base="http://tuckerthomas.com/jekyll/update/2019/08/03/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://tuckerthomas.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://tuckerthomas.com/" rel="alternate" type="text/html" /><updated>2019-08-14T00:15:28-04:00</updated><id>http://tuckerthomas.com/feed.xml</id><title type="html">Tucker Thomas</title><subtitle>My website for projects and other interesting things.</subtitle><entry><title type="html">Using Github Pages</title><link href="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html" rel="alternate" type="text/html" title="Using Github Pages" /><published>2019-08-13T21:38:11-04:00</published><updated>2019-08-13T21:38:11-04:00</updated><id>http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages</id><content type="html" xml:base="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html">&lt;p&gt;Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;For more information, check Github Pages &lt;a href=&quot;https://pages.github.com/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;For generating a static site, there’s plenty of tools. Really, just search ‘static site generator’ and you’ll find an abundance of tools. I decided to go with a well supported tool called &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;jekyll-setup&quot;&gt;Jekyll Setup&lt;/h3&gt;
+&lt;p&gt;Jekyll was written in ruby and was rather simple to install. If you’ve used python and virtual-env &lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;rbenv&lt;/a&gt; is right up your alley. It automatically manages ruby versions and switches based on a local &lt;code class=&quot;highlighter-rouge&quot;&gt;.ruby-version&lt;/code&gt; file instead of local binaries like virtual-env.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Once you’ve determined if you want to install rbenv, you can follow this guide like installing ruby gems.&lt;/p&gt;
+
+&lt;p&gt;Next we’ll install jekyll and bundle gems.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And initialize a new static site ‘My Blog’&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new myblog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will create a folder with everything we need inside of it.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd myblog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once inside, you can generate or build the site with&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Alternatively, if you want to host the site locally with the added benefit of hot-reloading&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When building, this will generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder. This is where all the static files will be placed, so that we can serve them in the future.&lt;/p&gt;
+
+&lt;h3 id=&quot;putting-it-all-together&quot;&gt;Putting it All Together&lt;/h3&gt;
+
+&lt;p&gt;So, the way Github Pages works is that it pulls from the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of the user’s &lt;code class=&quot;highlighter-rouge&quot;&gt;user.github.io&lt;/code&gt; repository and serves that on a web server. Since we’re using a static site generator we need to host the source/template files on another branch.&lt;/p&gt;
+
+&lt;p&gt;The cleanest way that I’ve seen and will suggest, is to put the source files onto a &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch and then put the generated &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder onto the ‘master’ branch.&lt;/p&gt;
+
+&lt;p&gt;When initializing the new jekyll site, make sure that a &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; file is created with the folder &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; added to it. This will allow us to not track the generated site and initialize another git repo within the folder.&lt;/p&gt;
+
+&lt;p&gt;Basically, within the &lt;code class=&quot;highlighter-rouge&quot;&gt;myblog&lt;/code&gt; folder&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+git remote add origin https://github.com/user/repo.git
+git checkout -b sources
+git add *
+git push origin sources
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, within the &lt;code class=&quot;highlighter-rouge&quot;&gt;myblog/_site&lt;/code&gt; folder&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+git remote add origin https://github.com/user/repo.git
+git add *
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Anyway, once that is setup you can locally make any edits to the site on the &lt;code class=&quot;highlighter-rouge&quot;&gt;sources&lt;/code&gt; branch and push them as needed. When you want to actually update the site on Github Pages, push the generated &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder to the master branch from within the folder.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="ruby" /><category term="blog" /><category term="github pages" /><summary type="html">Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).</summary></entry></feed>

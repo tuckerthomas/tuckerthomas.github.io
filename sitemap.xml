@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://tuckerthomas.com/jekyll/update/2019/08/03/welcome-to-jekyll.html</loc>
-<lastmod>2019-08-03T03:43:54-04:00</lastmod>
+<loc>http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html</loc>
+<lastmod>2019-08-13T21:38:11-04:00</lastmod>
 </url>
 <url>
 <loc>http://tuckerthomas.com/about/</loc>
+</url>
+<url>
+<loc>http://tuckerthomas.com/contact/</loc>
 </url>
 <url>
 <loc>http://tuckerthomas.com/</loc>
