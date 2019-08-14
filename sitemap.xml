@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html</loc>
+<loc>http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html</loc>
 <lastmod>2019-08-13T21:38:11-04:00</lastmod>
 </url>
 <url>
-<loc>https://tuckerthomas.com/about/</loc>
+<loc>http://tuckerthomas.com/about/</loc>
 </url>
 <url>
-<loc>https://tuckerthomas.com/contact/</loc>
+<loc>http://tuckerthomas.com/contact/</loc>
 </url>
 <url>
-<loc>https://tuckerthomas.com/</loc>
+<loc>http://tuckerthomas.com/</loc>
 </url>
 </urlset>
