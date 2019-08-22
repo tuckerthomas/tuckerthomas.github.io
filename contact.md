@@ -5,4 +5,4 @@ permalink: /contact/
 order: 0
 ---
 
-TEST
+Want to contact me? Send an email to [contact@tuckerthomas.com](mailto:contact@tuckerthomas.com)

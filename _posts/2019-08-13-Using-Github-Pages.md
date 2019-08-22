@@ -5,11 +5,10 @@ date: 2019-08-13 21:38:11 -0400
 categories: [software, tutorial]
 tags: [jekyll, ruby, blog, github pages]
 ---
-### Github Pages
 
 Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).
 
-For more information, check Github Pages [site][github-pages].
+For more information, check Github Pages' [site][github-pages].
 
 For generating a static site, there's plenty of tools. Really, just search 'static site generator' and you'll find an abundance of tools. I decided to go with a well supported tool called [Jekyll][jekyll].
 
@@ -49,7 +48,7 @@ When building, this will generate the `_site` folder. This is where all the stat
 
 So, the way Github Pages works is that it pulls from the `master` branch of the user's `user.github.io` repository and serves that on a web server. Since we're using a static site generator we need to host the source/template files on another branch.
 
-The cleanest way that I will suggest is to put the source files onto a `source` branch and then put the generated `_site` folder onto the 'master' branch.
+The cleanest way that I've seen and will suggest, is to put the source files onto a `source` branch and then put the generated `_site` folder onto the 'master' branch.
 
 When initializing the new jekyll site, make sure that a `.gitignore` file is created with the folder `_site` added to it. This will allow us to not track the generated site and initialize another git repo within the folder.
 
