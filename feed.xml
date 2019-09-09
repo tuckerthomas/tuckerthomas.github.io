@@ -1,6 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://tuckerthomas.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://tuckerthomas.com/" rel="alternate" type="text/html" /><updated>2019-08-14T01:01:34-04:00</updated><id>http://tuckerthomas.com/feed.xml</id><title type="html">Tucker Thomas</title><subtitle>My website for projects and other interesting things.</subtitle><entry><title type="html">Using Github Pages</title><link href="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html" rel="alternate" type="text/html" title="Using Github Pages" /><published>2019-08-13T21:38:11-04:00</published><updated>2019-08-13T21:38:11-04:00</updated><id>http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages</id><content type="html" xml:base="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html">&lt;p&gt;Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://tuckerthomas.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://tuckerthomas.com/" rel="alternate" type="text/html" /><updated>2019-09-09T00:11:24-04:00</updated><id>http://tuckerthomas.com/feed.xml</id><title type="html">Tucker Thomas</title><subtitle>My website for projects and other interesting things.</subtitle><entry><title type="html">Setting Up Email Forwarding</title><link href="http://tuckerthomas.com/software/tutorial/2019/09/08/Setting-Up-Email-Forwarding.html" rel="alternate" type="text/html" title="Setting Up Email Forwarding" /><published>2019-09-08T02:08:22-04:00</published><updated>2019-09-08T02:08:22-04:00</updated><id>http://tuckerthomas.com/software/tutorial/2019/09/08/Setting-Up-Email-Forwarding</id><content type="html" xml:base="http://tuckerthomas.com/software/tutorial/2019/09/08/Setting-Up-Email-Forwarding.html">&lt;h3 id=&quot;third-party-email-forwarders&quot;&gt;Third Party Email Forwarders&lt;/h3&gt;
+&lt;p&gt;In looking for a solution to utilize email forwarding, I found that Comcast (and most other internet service providers) block port 22 on resident networks. To receive or send any sort of email on a resident network there are two options: upgrade to business class internet or use a third party service for email.&lt;/p&gt;
 
-&lt;p&gt;For more information, check Github Pages &lt;a href=&quot;https://pages.github.com/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, that brings me to finding such a service.&lt;/p&gt;
+
+&lt;p&gt;The one I landed on was &lt;a href=&quot;https://forwardemail.net/&quot;&gt;ForwardMail&lt;/a&gt;. It’s free, open source and has a small following already. Now, there are some pros and cons to using a third party, specifically forwardmail, I’ll list a few of them below.&lt;/p&gt;
+
+&lt;h4 id=&quot;pros&quot;&gt;Pros&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Relies only on DNS (could be a con, depends on the person)&lt;/li&gt;
+  &lt;li&gt;Don’t have to deal with any networking/hosting&lt;/li&gt;
+  &lt;li&gt;Privacy, Forwardmail claims they don’t log anything&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cons&quot;&gt;Cons&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Privacy, up to you to trust them&lt;/li&gt;
+  &lt;li&gt;Forwardmail hosts the service, if they go down there’s not much to be done&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+&lt;p&gt;If you’d like to read through the documentation yourself, I’ll link it &lt;a href=&quot;https://forwardemail.net/#/?id=how-it-works&quot;&gt;here&lt;/a&gt;. Otherwise, feel free to continue reading.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h4&gt;
+&lt;p&gt;Like normal MX DNS entries, they point to which servers handle the domain’s mail. We’ll set these to forwardemail’s so they can handle the mail for us.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name/Host/Alias&lt;/th&gt;
+      &lt;th&gt;TTL&lt;/th&gt;
+      &lt;th&gt;Record Type&lt;/th&gt;
+      &lt;th&gt;Priority&lt;/th&gt;
+      &lt;th&gt;Value/Answer/Destination&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;@ or leave blank&lt;/td&gt;
+      &lt;td&gt;3600&lt;/td&gt;
+      &lt;td&gt;MX&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mx1.forwardemail.net&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we need to tell forwardemail what addresses to handle and where to forward them to. Forwardmail will lookup the txt entry and configure their service depending on what is entered. This will email all emails to the forwarded address &lt;code class=&quot;highlighter-rouge&quot;&gt;example_email@gmail.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name/Host/Alias&lt;/th&gt;
+      &lt;th&gt;TTL&lt;/th&gt;
+      &lt;th&gt;Record Type&lt;/th&gt;
+      &lt;th&gt;Value/Answer/Destination&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;@ or leave blank&lt;/td&gt;
+      &lt;td&gt;3600&lt;/td&gt;
+      &lt;td&gt;TXT&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;forward-email=example_email@gmail.com&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’d only like to send emails to say contact@customdomain.com use the setting below.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name/Host/Alias&lt;/th&gt;
+      &lt;th&gt;TTL&lt;/th&gt;
+      &lt;th&gt;Record Type&lt;/th&gt;
+      &lt;th&gt;Value/Answer/Destination&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;@ or leave blank&lt;/td&gt;
+      &lt;td&gt;3600&lt;/td&gt;
+      &lt;td&gt;TXT&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;forward-email=contact:example_email@gmail.com&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we need to setup SPF verification or Sender Policy Framework verification. Basically, we use this to verify that the email is origination from our domain and that it’s legitimate.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name/Host/Alias&lt;/th&gt;
+      &lt;th&gt;TTL&lt;/th&gt;
+      &lt;th&gt;Record Type&lt;/th&gt;
+      &lt;th&gt;Value/Answer/Destination&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;@ or leave blank&lt;/td&gt;
+      &lt;td&gt;3600&lt;/td&gt;
+      &lt;td&gt;TXT&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v=spf1 a mx include:spf.forwardemail.net -all&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;using-gmail&quot;&gt;Using Gmail&lt;/h3&gt;
+&lt;p&gt;With that, email forwarding is setup and sending emails to &lt;code class=&quot;highlighter-rouge&quot;&gt;example_email@gmail.com&lt;/code&gt;. Now, if you’d like to respond to the emails from gmail and use the custom domain’s email address you can follow this &lt;a href=&quot;https://forwardemail.net/#/?id=send-mail-as-using-gmail&quot;&gt;guide&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="email" /><category term="gmail" /><category term="email forwarding" /><category term="dns" /><category term="custom domain" /><category term="comcast sucks" /><category term="forwardmail" /><summary type="html">Third Party Email Forwarders In looking for a solution to utilize email forwarding, I found that Comcast (and most other internet service providers) block port 22 on resident networks. To receive or send any sort of email on a resident network there are two options: upgrade to business class internet or use a third party service for email.</summary></entry><entry><title type="html">Using Github Pages</title><link href="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html" rel="alternate" type="text/html" title="Using Github Pages" /><published>2019-08-13T21:38:11-04:00</published><updated>2019-08-13T21:38:11-04:00</updated><id>http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages</id><content type="html" xml:base="http://tuckerthomas.com/software/tutorial/2019/08/13/Using-Github-Pages.html">&lt;p&gt;Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).&lt;/p&gt;
+
+&lt;p&gt;For more information, check Github Pages’ &lt;a href=&quot;https://pages.github.com/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For generating a static site, there’s plenty of tools. Really, just search ‘static site generator’ and you’ll find an abundance of tools. I decided to go with a well supported tool called &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
 
@@ -54,4 +171,4 @@ git add *
 git push origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Anyway, once that is setup you can locally make any edits to the site on the &lt;code class=&quot;highlighter-rouge&quot;&gt;sources&lt;/code&gt; branch and push them as needed. When you want to actually update the site on Github Pages, push the generated &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder to the master branch from within the folder.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="ruby" /><category term="blog" /><category term="github pages" /><summary type="html">Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).</summary></entry></feed>
+&lt;p&gt;Anyway, once that is setup you can locally make any edits to the site on the &lt;code class=&quot;highlighter-rouge&quot;&gt;sources&lt;/code&gt; branch and push them as needed. When you want to actually update the site on Github Pages, push the generated &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder to the master branch from within the folder.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="ruby" /><category term="blog" /><category term="github pages" /><category term="custom domain" /><summary type="html">Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).</summary></entry></feed>
