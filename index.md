@@ -6,6 +6,6 @@ layout: home
 tags: [Tucker Thomas, Tucker, Thomas, tuckerthomas]
 ---
 
-### Welcome, 
+## Welcome, 
 
 Feel free to check out some posts or learn more [about](/about/) me or [contact](/contact/) me.
