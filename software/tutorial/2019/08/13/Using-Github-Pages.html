@@ -251,7 +251,7 @@
 
 <p>So, the way Github Pages works is that it pulls from the <code class="highlighter-rouge">master</code> branch of the user’s <code class="highlighter-rouge">user.github.io</code> repository and serves that on a web server. Since we’re using a static site generator we need to host the source/template files on another branch.</p>
 
-<p>The cleanest way that I’ve seen and will suggest, is to put the source files onto a <code class="highlighter-rouge">source</code> branch and then put the generated <code class="highlighter-rouge">_site</code> folder onto the ‘master’ branch.</p>
+<p>The cleanest way that I’ve seen and will suggest, is to put the source files onto a <code class="highlighter-rouge">source</code> branch and then put the generated <code class="highlighter-rouge">_site</code> folder onto the <code class="highlighter-rouge">master</code> branch.</p>
 
 <p>When initializing the new jekyll site, make sure that a <code class="highlighter-rouge">.gitignore</code> file is created with the folder <code class="highlighter-rouge">_site</code> added to it. This will allow us to not track the generated site and initialize another git repo within the folder.</p>
 
