@@ -3,7 +3,7 @@ layout: post
 title: "Using Github Pages"
 date: 2019-08-13 21:38:11 -0400
 categories: [software, tutorial]
-tags: [jekyll, ruby, blog, github pages]
+tags: [jekyll, ruby, blog, github pages, custom domain]
 ---
 
 Github Pages hosts a static site within a Github repository and then allows Github to host the site. You can use these sites for individual projects or even as a living resume and blog (my current plan).
