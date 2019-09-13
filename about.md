@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: Want to know more about Tucker Thomas?
 ref: about
 ---
 
