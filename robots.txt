@@ -1,1 +1,1 @@
-Sitemap: http://tuckerthomas.com/sitemap.xml
+Sitemap: https://tuckerthomas.com/sitemap.xml
